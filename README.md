@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# ExpenseFlow
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ExpenseFlow is a modern, responsive, and user-friendly personal finance management application built with React.js.
 
-## Available Scripts
+It helps users track income and expenses, manage monthly budgets, monitor recurring transactions, analyze spending patterns, and manage financial data from one centralized dashboard.
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- 📊 Interactive financial dashboard
+- 💰 Income and expense tracking
+- 🧾 Add, edit, and delete transactions
+- 💵 Monthly budget management
+- 📈 Expense analytics and visual charts
+- 🥧 Category-based spending breakdown
+- 🔁 Recurring transaction management
+- 🔔 Smart financial notifications
+- 🌙 Dark mode support
+- 🔎 Transaction search and filtering
+- 📤 Export financial data
+- 💾 Backup and restore functionality
+- 🗑️ Reset financial data
+- 💡 Dashboard financial insights
+- 📱 Responsive design for desktop, tablet, and mobile
+- 💽 Local storage data persistence
+- ⚡ Mock API data loading
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React.js
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- Recharts
+- React Hooks
+- Browser Local Storage
+- Mock API Data
+- Git & GitHub
 
-### `npm test`
+## 📂 Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```text
+src/
+├── components/
+│   ├── sidebar/
+│   │   └── Sidebar.js
+│   ├── AnalyticsChart.js
+│   ├── BackupRestore.js
+│   ├── BudgetCard.js
+│   ├── CategoryBreakdown.js
+│   ├── DashboardInsights.js
+│   ├── ExpenseForm.js
+│   ├── ExpenseList.js
+│   ├── ExportButton.js
+│   ├── NotificationCenter.js
+│   ├── QuickActions.js
+│   ├── RecurringTransactions.js
+│   ├── SummaryCards.js
+│   ├── Toast.js
+│   └── UserProfile.js
+│
+├── App.js
+├── App.css
+└── index.js
