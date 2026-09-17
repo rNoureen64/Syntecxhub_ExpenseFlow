@@ -932,117 +932,88 @@ function App() {
         ref={mainContentRef}
         className="main-content"
       >
-        {/* =================================================
-            DASHBOARD
-            ================================================= */}
+        
+{/* =================================================
+    DASHBOARD
+    ================================================= */}
 
-        {activeSection ===
-          "dashboard" && (
-          <>
-            <div className="page-header">
-              <div>
-                <span className="page-eyebrow">
-                  FINANCIAL OVERVIEW
-                </span>
+{activeSection === "dashboard" && (
+  <>
+    <div className="page-header">
+      <div>
+        <span className="page-eyebrow">
+          FINANCIAL OVERVIEW
+        </span>
 
-                <h1>
-                  Dashboard
-                </h1>
+        <h1>
+          Dashboard
+        </h1>
 
-                <p>
-                  Track your money,
-                  understand your
-                  spending, and stay
-                  financially organized.
-                </p>
-              </div>
+        <p>
+          Track your money, understand your spending,
+          and stay financially organized.
+        </p>
+      </div>
 
-              <div className="dashboard-date">
-                {new Date().toLocaleDateString(
-                  "en-US",
-                  {
-                    weekday:
-                      "long",
-                    month:
-                      "long",
-                    day:
-                      "numeric",
-                    year:
-                      "numeric"
-                  }
-                )}
-              </div>
-            </div>
-
-            <SummaryCards
-              transactions={
-                transactions
-              }
-            />
-
-            <div className="dashboard-grid">
-              <div>
-                <ExpenseForm
-                  addTransaction={
-                    addTransaction
-                  }
-                  updateTransaction={
-                    updateTransaction
-                  }
-                  editingTransaction={
-                    editingTransaction
-                  }
-                  cancelEdit={() =>
-                    setEditingTransaction(
-                      null
-                    )
-                  }
-                  showValidationToast={
-                    showValidationToast
-                  }
-                />
-              </div>
-
-              <div>
-                <DashboardInsights
-                  transactions={
-                    transactions
-                  }
-                  budget={budget}
-                />
-              </div>
-            </div>
-
-            <BudgetCard
-              transactions={
-                transactions
-              }
-              budget={budget}
-              setBudget={setBudget}
-            />
-
-            <QuickActions
-              setActiveSection={
-                setActiveSection
-              }
-            />
-
-            <div className="dashboard-grid">
-              <CategoryBreakdown
-                transactions={
-                  transactions
-                }
-              />
-
-              <DashboardInsights
-                transactions={
-                  transactions
-                }
-                budget={budget}
-              />
-            </div>
-          </>
+      <div className="dashboard-date">
+        {new Date().toLocaleDateString(
+          "en-US",
+          {
+            weekday: "long",
+            month: "long",
+            day: "numeric",
+            year: "numeric"
+          }
         )}
+      </div>
+    </div>
+
+    <SummaryCards
+      transactions={transactions}
+    />
+
+    <div className="dashboard-grid">
+      <div>
+        <ExpenseForm
+          addTransaction={addTransaction}
+          updateTransaction={updateTransaction}
+          editingTransaction={editingTransaction}
+          cancelEdit={() =>
+            setEditingTransaction(null)
+          }
+          showValidationToast={showValidationToast}
+        />
+      </div>
+
+      <div>
+        <DashboardInsights
+          transactions={transactions}
+          budget={budget}
+        />
+      </div>
+    </div>
+
+    <BudgetCard
+      transactions={transactions}
+      budget={budget}
+      setBudget={setBudget}
+    />
+
+    <QuickActions
+      setActiveSection={setActiveSection}
+    />
+
+    <CategoryBreakdown
+      transactions={transactions}
+    />
+
+    <AnalyticsChart
+      transactions={transactions}
+    />
+  </>
+)}
+
+
 
         {/* =================================================
             TRANSACTIONS

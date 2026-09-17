@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 
 function ExpenseForm({
@@ -87,31 +86,47 @@ function ExpenseForm({
 
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label>Title</label>
+          <label htmlFor="transaction-title">
+            Title
+          </label>
 
           <input
+            id="transaction-title"
+            name="title"
             type="text"
             placeholder="Enter transaction title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
+            autoComplete="off"
           />
         </div>
 
         <div className="form-group">
-          <label>Amount</label>
+          <label htmlFor="transaction-amount">
+            Amount
+          </label>
 
           <input
+            id="transaction-amount"
+            name="amount"
             type="number"
             placeholder="Enter amount"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
+            min="0"
+            step="0.01"
+            inputMode="decimal"
           />
         </div>
 
         <div className="form-group">
-          <label>Type</label>
+          <label htmlFor="transaction-type">
+            Type
+          </label>
 
           <select
+            id="transaction-type"
+            name="type"
             value={type}
             onChange={(e) => setType(e.target.value)}
           >
@@ -121,9 +136,13 @@ function ExpenseForm({
         </div>
 
         <div className="form-group">
-          <label>Category</label>
+          <label htmlFor="transaction-category">
+            Category
+          </label>
 
           <select
+            id="transaction-category"
+            name="category"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
           >
@@ -139,9 +158,13 @@ function ExpenseForm({
         </div>
 
         <div className="form-group">
-          <label>Date</label>
+          <label htmlFor="transaction-date">
+            Date
+          </label>
 
           <input
+            id="transaction-date"
+            name="date"
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
@@ -150,7 +173,9 @@ function ExpenseForm({
 
         <div className="form-buttons">
           <button type="submit">
-            {editingTransaction ? "Update Transaction" : "Add Transaction"}
+            {editingTransaction
+              ? "Update Transaction"
+              : "Add Transaction"}
           </button>
 
           {editingTransaction && (

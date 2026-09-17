@@ -123,14 +123,18 @@ import React from "react";function BudgetCard({ transactions, budget, setBudget 
             <span>Rs.</span>
 
             <input
-              type="number"
-              placeholder="Enter monthly budget"
-              value={budgetInput}
-              onChange={(e) =>
-                setBudgetInput(e.target.value)
-              }
-              min="1"
-            />
+  id="monthly-budget"
+  name="monthlyBudget"
+  type="number"
+  placeholder="Enter monthly budget"
+  value={budgetInput}
+  onChange={(e) =>
+    setBudgetInput(e.target.value)
+  }
+  min="1"
+  step="1"
+  inputMode="numeric"
+/>
           </div>
 
           <button type="submit">

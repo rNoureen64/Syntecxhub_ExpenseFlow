@@ -184,60 +184,67 @@ function RecurringTransactions({ addTransaction }) {
 
         <div className="recurring-field">
 
-          <label>
-            Transaction Name
-          </label>
+         <label htmlFor="recurring-title">
+  Transaction Name
+</label>
 
-          <input
-            type="text"
-            placeholder="e.g. Internet Bill"
-            value={title}
-            onChange={(e) =>
-              setTitle(e.target.value)
-            }
-          />
-
-        </div>
-
-        <div className="recurring-field">
-
-          <label>
-            Amount
-          </label>
-
-          <div className="recurring-amount-input">
-
-            <span>
-              Rs.
-            </span>
-
-            <input
-              type="number"
-              placeholder="0"
-              value={amount}
-              onChange={(e) =>
-                setAmount(e.target.value)
-              }
-              min="1"
-            />
-
-          </div>
+<input
+  id="recurring-title"
+  name="title"
+  type="text"
+  placeholder="e.g. Internet Bill"
+  value={title}
+  onChange={(e) =>
+    setTitle(e.target.value)
+  }
+/>
 
         </div>
 
         <div className="recurring-field">
 
-          <label>
-            Type
-          </label>
+          <label htmlFor="recurring-amount">
+  Amount
+</label>
 
-          <select
-            value={type}
-            onChange={(e) =>
-              setType(e.target.value)
-            }
-          >
+<div className="recurring-amount-input">
 
+  <span>
+    Rs.
+  </span>
+
+  <input
+    id="recurring-amount"
+    name="amount"
+    type="number"
+    placeholder="0"
+    value={amount}
+    onChange={(e) =>
+      setAmount(e.target.value)
+    }
+    min="1"
+    step="0.01"
+    inputMode="decimal"
+  />
+
+</div>
+
+        </div>
+
+        <div className="recurring-field">
+
+         <label htmlFor="recurring-type">
+  Type
+</label>
+
+<select
+  id="recurring-type"
+  name="type"
+  value={type}
+  onChange={(e) =>
+    setType(e.target.value)
+  }
+>
             <option value="expense">
               Expense
             </option>
@@ -252,16 +259,18 @@ function RecurringTransactions({ addTransaction }) {
 
         <div className="recurring-field">
 
-          <label>
-            Category
-          </label>
+         <label htmlFor="recurring-category">
+  Category
+</label>
 
-          <select
-            value={category}
-            onChange={(e) =>
-              setCategory(e.target.value)
-            }
-          >
+<select
+  id="recurring-category"
+  name="category"
+  value={category}
+  onChange={(e) =>
+    setCategory(e.target.value)
+  }
+>
 
             <option value="Bills">
               Bills
@@ -305,16 +314,18 @@ function RecurringTransactions({ addTransaction }) {
 
         <div className="recurring-field">
 
-          <label>
-            Frequency
-          </label>
+        <label htmlFor="recurring-frequency">
+  Frequency
+</label>
 
-          <select
-            value={frequency}
-            onChange={(e) =>
-              setFrequency(e.target.value)
-            }
-          >
+<select
+  id="recurring-frequency"
+  name="frequency"
+  value={frequency}
+  onChange={(e) =>
+    setFrequency(e.target.value)
+  }
+>
 
             <option value="Weekly">
               Weekly
